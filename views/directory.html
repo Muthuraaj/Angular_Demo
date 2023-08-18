@@ -1,0 +1,28 @@
+<button ng-click="order='name'">OrderBy Name</button>
+<button ng-click="order='age'">OrderBy Number</button>
+<input type="text" ng-model="search" />
+<p>{{variable}}</p>
+<p
+  ng-repeat="data in datas | orderBy:order | filter:search"
+  ng-show="data.available"
+  style="display: flex; align-items: center; gap: 5px"
+>
+  <img
+    ng-src="{{data.thumb}}"
+    alt=""
+    style="width: 50px; height: 50px; border-radius: 50%"
+    ng-show="data.thumb"
+  />
+
+  {{data.name}}-{{data.age}}
+  <span
+    style="color: red; cursor: pointer; font-size: 1.3rem"
+    ng-click="removeFunc(data)"
+    >x</span
+  >
+</p>
+<form ng-submit="addNew()">
+  <input type="text" placeholder="Name" ng-model="newprofile.name" />
+  <input type="text" placeholder="Age" ng-model="newprofile.age" />
+  <input type="submit" value="Add new Profile" />
+</form>

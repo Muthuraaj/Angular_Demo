@@ -1,0 +1,5 @@
+[
+  { "name": "muthu", "age": 20, "available": true, "thumb": "./profile1.jpg" },
+  { "name": "raj", "age": 21, "available": true, "thumb": "./profile2.jpg" },
+  { "name": "manoj", "age": 23, "available": true, "thumb": "./profile3.jpg" }
+]
